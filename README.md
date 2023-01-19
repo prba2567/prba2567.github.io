@@ -1,10 +1,10 @@
 # prba2567.github.io
 
 
-# Projects
-### -HTML
-### -CSS
-### -JS
+## Projects
+### *HTML
+### *CSS
+### *JS
 
 ## In-Class Assignments
 ### -ICA1
