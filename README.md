@@ -9,7 +9,7 @@
 ## In-Class Assignments
 * ### ICA1
 * ### ICA2
-* ### [ICA3A](https://prba2567.github.io/ica/ica3a.html)
+* ### [ICA3](https://prba2567.github.io/ica/ica3a.html)
 * ### ICA4
 * ### ICA5
 * ### ICA6
