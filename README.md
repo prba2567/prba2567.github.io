@@ -9,7 +9,7 @@
 ## In-Class Assignments
 * ### ICA1
 * ### ICA2
-* ### ICA3
+* ### [ICA3](https://prba2567.github.io/ica/ica3a.html)
 * ### ICA4
 * ### ICA5
 * ### ICA6
@@ -24,8 +24,8 @@
 * ### ICA15
 
 ## Weekly Assignments
-* ### WA1
-* ### WA2
+* ### [WA1](https://prba2567.github.io/wa/wa1.html)
+* ### [WA2](https://prba2567.github.io/wa/wa2.html)
 * ### WA3
 * ### WA4
 * ### WA5
