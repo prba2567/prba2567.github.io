@@ -11,7 +11,8 @@
         color:hotpink;
         font-size: 2em;
         font-family: Georgia, 'Times New Roman', Times, serif;
-        border-bottom: 1px solid #375e97;
+        border-bottom-style: dotted;
+        border-bottom: none thick purple;
       }
 
       h2 {
@@ -37,4 +38,7 @@
       a:hover {
         text-decoration: none;
       }
-   
+      .border{
+        border-bottom-style: dotted;
+        border-bottom: none thick palevioletred;
+      }
