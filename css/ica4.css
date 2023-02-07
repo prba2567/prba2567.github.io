@@ -22,6 +22,13 @@
         color: #999999;
         font-weight: bold;
       }
+      ul{
+        border: 0.5rem outset pink;
+        border-radius: 12px;
+        font: bold 1rem sans-serif;
+        margin: 2rem;
+        padding: 1rem;
+      }
 
       a:link,
       a:visited {
