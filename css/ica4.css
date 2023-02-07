@@ -38,6 +38,7 @@
 
       a:hover {
         text-decoration: none;
+        color: green;
       }
       .border{
         border-bottom-style: dotted;
