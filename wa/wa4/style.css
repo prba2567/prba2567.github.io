@@ -26,6 +26,7 @@ body {
     background-color: red;
     border: 0.2em solid black;
     border-radius: 1.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
   .card header
@@ -75,6 +76,7 @@ body {
     color:white;
   }
 
+/*card 2*/
 
   .card2{
     width: 35em;
@@ -83,6 +85,7 @@ body {
     background-color:darkslategrey;
     border: 0.2em solid black;
     border-radius: 1.5em;
+    font-family: cursive;
   }
   
   .card2 header
@@ -124,7 +127,8 @@ body {
   
   .card2 footer p {
     font-size: 1.5em;
-    line-height:1;
+    line-height:1.5;
+    padding-left :0.5em;
     color: aliceblue;
   }
 
