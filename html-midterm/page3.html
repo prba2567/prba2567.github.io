@@ -25,8 +25,10 @@
         <span> | </span>
         <a href="/html-midterm/page4.html">Page 4</a>
         <span> | </span>
+        <a href="/html-midterm/page5.html">Page 5</a>
+        <span> | </span>
     </div>
-    
+
     <a href="https://en.wikipedia.org/wiki/Table_(information)">Source page</a>
     <h1>Table (information)</h1>
     <hr>
@@ -48,7 +50,7 @@
     <ul>
         <li>the term row has several common synonyms</li>
         <li>the term column has several common synonyms (e.g., field, parameter, property, attribute, stanchion);</li>
-        <l>a column is usually identified by a name;</l>
+        <li>a column is usually identified by a name;</li> <!-- A l element is not supposed to a child element of ul; however, in this context, it seems like it was supposed to be a li tag instead of a l tag. So I just added a i to to the beginning and ending tag. -->
         <li>a column name can consist of a word, phrase or a numerical index;</li>
         <li>the intersection of a row and a column is called a cell.</li>
     </ul>
@@ -75,26 +77,27 @@
         </tr>
         <tr>
             <td>Javier</td>
-            <th>Zapata</th>
+            <td>Zapata</td>  <!--Zapata was not in the same format as the other elements in the tr section . So, I changed Zapata from a th to a td tag.-->
             <td>28</td>
-            <td>Lily</>
+            <!--A td tag was not closed properly. It just had the / and the <> , so I added a td to fix it.-->
         </tr>
         <tr>
+            <td>Lily</td> 
             <td>McGarrett</td>
             <td>36</td>
         </tr>
         <tr>
             <td>Olatunkbo</td>
             <td>Chijiaku</td>
+            <td>22</td>
         </tr>
         <tr>
-            <td>22</td>
             <td>Adrienne</td>
             <td>Anthoula</td>
             <td>22</td>
-        </tr>
-        <td>Axelia</td>
+        </tr> <!-- A td tag is existing without a tr tag. So, I just moved it into a tr tag.-->
         <tr>
+            <td>Axelia</td> 
             <td>Athanasios</td>
             <td>22</td>
         </tr>
@@ -102,3 +105,4 @@
     </table>
 </body>
 </html>
+
