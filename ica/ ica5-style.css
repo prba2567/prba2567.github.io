@@ -20,8 +20,8 @@
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.2)),
     url(../ica/top-image.png) no-repeat left top,
     url(../ica/bottom-image.png) no-repeat left bottom;
-    border-top:  2em solid red;
-    border-bottom: 2em solid red;
+    border-top:  0.5em solid red;
+    border-bottom: 0.5em solid red;
     
     
 
