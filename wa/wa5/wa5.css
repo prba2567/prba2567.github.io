@@ -1,0 +1,23 @@
+body,html{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    min-width: 100%;
+    min-height:100%;
+}
+#ov1{
+    color: brown;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+
+}
+#ov2{
+    color: blue;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+}
