@@ -9,10 +9,12 @@ img{
     min-height:100%;
 }
 #ov1{
-    color: brown;
     position: fixed;
-    bottom: 50px;
-    left: 50px;
+    bottom: 0px;
+    left: 0px;
+    padding: 0;
+    margin: 0;
+    /* background:url(../wa5/o1.jpeg); */
 
 }
 #ov2{
@@ -20,4 +22,17 @@ img{
     position: fixed;
     bottom: 50px;
     left: 50px;
+}
+#logo{
+   height: 80%;
+   width: 40%;
+   min-width: 150%;
+   padding: 0;
+    margin: 0;
+  
+}
+
+#name{
+
+    
 }
