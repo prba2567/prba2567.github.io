@@ -4,24 +4,29 @@ body,html{
     margin: 0;
 }
 
-img{
+#main{
     min-width: 100%;
     min-height:100%;
+    position: fixed;
 }
 #ov1{
     position: fixed;
     bottom: 0px;
-    left: 0px;
+    right: 20px;
     padding: 0;
     margin: 0;
+    height: 80px;
+    width: 40px;
     /* background:url(../wa5/o1.jpeg); */
 
 }
 #ov2{
-    color: blue;
+    
+    color:white;
     position: fixed;
     bottom: 50px;
     left: 50px;
+    
 }
 #logo{
    height: 80%;
@@ -32,7 +37,31 @@ img{
   
 }
 
-#name{
+.flag{
+    height: 15px;
+    width: 30px;
+ }
 
+ .score{
+    border:5px solid rgb(69, 65, 65);
+    border-spacing:5px;
+    background-color: blue;
+    height:30px;
+    width: 370px;
+    position: relative;
+    border-radius: 10px;
+    text-indent: 10px;
+   
     
-}
+ }
+
+ .title{
+    color: blue;
+    background-color:white;
+    border:5px solid rgb(75, 71, 71);
+    text-shadow: 1px 1px 1px rgb(50, 49, 49);
+    height: 35px;
+    font-size: 25px;
+    border-radius: 10px;
+    text-indent: 10px;
+ }
