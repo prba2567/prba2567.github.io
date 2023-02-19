@@ -2,7 +2,7 @@
 
 
 ## Projects
-* ### HTML
+* ### [HTML](https://prba2567.github.io/html-midterm/page5.html)
 * ### CSS
 * ### JS
 
@@ -28,7 +28,7 @@
 * ### [WA2](https://prba2567.github.io/wa/wa2.html)
 * ### [WA3](https://prba2567.github.io/wa/wa3.html)
 * ### [WA4](https://prba2567.github.io/wa/wa4/index.html)
-* ### WA5
+* ### [WA5](https://prba2567.github.io/wa/wa5/wa5.html)
 * ### WA6
 * ### WA7
 * ### WA8
