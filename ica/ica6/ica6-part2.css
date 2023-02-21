@@ -28,6 +28,7 @@ body{
 #no4{
 }
 #no5{
+    
 }
 #no6{
 }
@@ -36,4 +37,8 @@ body{
 #no8{
 }
 #no9{
+}
+
+#flex-child2{
+    order: 2;
 }

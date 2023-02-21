@@ -1,5 +1,6 @@
 #narrowScreen{
     background-color: green;
+
 }
 #wideScreen{
     background-color: red;
@@ -9,4 +10,11 @@
 }
 #tallScreen{
     background-color: lavender;
+}
+
+@media only screen and (max-width: 600px;){
+    #narrowScreen{
+        background-color: purple;
+    
+    }
 }

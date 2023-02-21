@@ -10,6 +10,7 @@ body{
     border-radius:10px;
     background-color: mediumseagreen;
     position:relative;
+
 }
 #box2{
     width: 73vw;
@@ -17,14 +18,28 @@ body{
     border-style: solid;
     border-radius:3px;
     border-color:purple;
-    position:relative;
-    left: 40vw;
+    position: relative;
+    left: 40vh;
     background-color: mediumvioletred;
 }
 #box3{
+top: 0px;
 position: sticky;
 width: 73vw;
-height: 175vh;
+height: 100vh;
 border-radius: 10px;
 background-color: orangered;
+
+}
+#text1{
+    left: 110%;
+    position: relative;
+}
+#text2{
+    position: absolute;
+    top: 27vh;
+}
+#text3{
+    position: sticky;
+    top: 0;
 }
