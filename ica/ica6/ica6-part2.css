@@ -10,7 +10,8 @@ body{
 }
 #grid-parent{
     display:grid;
-    grid-template-columns: repeat(3,1f);
+    grid-template-columns: repeat(3,1fr);
+    float: left;
 }
 #grid-parent h1{
     background-color: grey;
@@ -40,15 +41,15 @@ body{
 #no9{
 }
 
-#flex-child{
+#flex-child1{
     order: 3;
 }
 #flex-child2{
-    order: 2;
+    order: 4;
 }
 #flex-child3{
-    order: 1;
+    order: 2;
 }
 #flex-child4{
-    order: 4;
+    order: 1;
 }
