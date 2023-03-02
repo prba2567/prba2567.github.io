@@ -1,0 +1,67 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:grey;
+}
+nav{
+    font-family: fantasy;
+    height: 50px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: lightsteelblue;
+    font-size: 20px;
+    transition-property: font-size;
+    transition-duration: 3s ;
+    transition-delay: 1s;
+    
+}
+
+nav:hover{
+    background-color:rgb(120, 193, 165);
+    font-size: 30px;
+    color: blue;
+}
+
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color:darkcyan;
+}
+
+
+img{
+    width:30vw;
+    height: 30vh;
+}
+
+#red-ball{
+    background-color: rgb(79, 105, 222);
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+    animation: redball 5s linear 2s infinite alternate;
+    
+
+}
+
+@keyframes redball{
+    from{
+        margin-left: 100%;
+       
+        background-color: darkcyan;
+    }
+    to{
+        margin-left: 0%;
+       
+        background-color: deepskyblue;
+    }
+
+}
