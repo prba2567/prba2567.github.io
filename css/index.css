@@ -96,6 +96,9 @@ div a{
     background-image: url("mbg.png");
 }
 
+div{
+    margin-bottom: 10px;
+}
 
 
 @media only screen and (max-width: 500px) {
