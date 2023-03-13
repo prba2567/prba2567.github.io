@@ -78,7 +78,7 @@ div a{
 @keyframes bmove{
 
     from{
-        margin-left: 100%;
+        margin-left: 90%;
        
     }
     to{
@@ -133,7 +133,7 @@ div{
     }
     .hcontainer{
     
-        height: 330vh;
+        height: 350vh;
     
     }
 }
