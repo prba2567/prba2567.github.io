@@ -29,8 +29,8 @@
 * ### [WA3](https://prba2567.github.io/wa/wa3.html)
 * ### [WA4](https://prba2567.github.io/wa/wa4/index.html)
 * ### [WA5](https://prba2567.github.io/wa/wa5/wa5.html)
-* ### WA6
-* ### WA7
+* ### [WA6](https://prba2567.github.io/wa/wa6/index.html)
+* ### [WA7](https://prba2567.github.io/wa/wa7/wa7.html)
 * ### WA8
 * ### WA9
 * ### WA10
