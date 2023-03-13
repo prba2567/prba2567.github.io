@@ -113,3 +113,45 @@ div a{
         height: 70%;
     }
 }
+
+@media only screen and (max-height: 400px) {
+
+
+    .hcontainer{
+        grid-template-columns: 1fr;
+    }
+    #i{
+        height: 20%;
+        width: 30%;
+    }
+    .image{
+        width: 70%;
+        height: 70%;
+    }
+    .hcontainer{
+    
+        height: 330vh;
+    
+    }
+}
+
+@media only screen and (max-height: 500px) {
+
+
+    .hcontainer{
+        grid-template-columns: 1fr;
+    }
+    #i{
+        height: 20%;
+        width: 30%;
+    }
+    .image{
+        width: 70%;
+        height: 70%;
+    }
+    .hcontainer{
+    
+        height: 330vh;
+    
+    }
+}
