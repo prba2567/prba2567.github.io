@@ -1,0 +1,115 @@
+nav{
+    font-family:cursive;
+    height: 40px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: lightsteelblue;
+    background: linear-gradient(rgba(22, 100, 126, 0.282) 30%, rgba(50, 81, 106, 0) 100%, rgba(14, 20, 32, 0.2) 60%);
+    font-size: 22px;
+    transition-property: font-size;
+    transition-duration: 3s ;
+    transition-delay: 1s;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: sticky;
+}
+body{
+    margin: 10px;
+}
+
+a:hover{
+    background-color:rgba(120, 193, 165, 0.652);
+    font-size: 30px;
+    color: rgba(0, 0, 255, 0.389);
+}
+
+nav a{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+div a{
+    color:rgba(228, 238, 238, 0.869);
+    font-size: 30px;
+}
+
+.h{
+    background-image: url("1.png");
+}
+
+.hcontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+
+}
+
+.columnleft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: bisque;
+    padding: 10px;
+}
+.columnleft h1{
+    font-size: 70px;
+    color: rgba(240, 255, 255, 0.869);
+    margin: 0;
+}
+.columnleft p{
+    color:rgba(228, 238, 238, 0.869);
+    font-size: 30px;
+}
+.columnright{
+    display: flex;
+    justify-content: center;
+
+}
+.image{
+    width: 110%;
+    height: 110%;
+}
+#i{
+    width: 100%;
+    height: 100%;
+    animation: bmove 5s linear 2s infinite alternate;
+}
+@keyframes bmove{
+
+    from{
+        margin-left: 100%;
+       
+    }
+    to{
+        margin-left: 0%;
+
+    }
+
+}
+
+.P{
+    background-image: url("pbg.png");
+}
+
+.M{
+    background-image: url("mbg.png");
+}
+
+
+
+@media only screen and (max-width: 500px) {
+
+
+    .hcontainer{
+        grid-template-columns: 1fr;
+    }
+    #i{
+        height: 20%;
+        width: 30%;
+    }
+    .image{
+        width: 70%;
+        height: 70%;
+    }
+}

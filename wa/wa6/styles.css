@@ -88,14 +88,8 @@ order: 5;
 
 
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 400px){
   
-  .grid{
-    margin: 0 auto;
-  padding: 0 20px;
-  max-width: 980px;
-  display: grid;
-  grid-template-columns: 1fr;
-  }
+ 
   
 }
