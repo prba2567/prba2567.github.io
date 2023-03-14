@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #button{
+            border: 12px solid seagreen;
+            border-radius: 25px;
+            background-color: cornsilk;
+            padding: 25px 50px;
+            width: 250px;
+            font-size: 45px;
+
+        }
+        #abutton{
+            border: 12px solid pink;
+            border-radius: 25px;
+            background-color: lightblue;
+            padding: 25px 50px;
+            width: 250px;
+            font-size: 45px;
+
+        }
+
+        p{
+            font-size: 45px;
+        
+        }
+    </style>
+</head>
+<body>
+    <div id = "button"> 
+        <p>
+            click me!
+        </p>
+
+    </div>
+
+    <br>
+
+    <div class = "form">
+        <label for = "guessField"> select number</label> 
+        <input type="number" min="1" max="100" required id= "guessField" class = "guessField">
+        <input type="submit" value="Submit num" class="guessField">
+
+    </div>
+
+    <div id = "abutton"> 
+        <p>
+            Another button
+        </p>
+
+    </div>
+
+    <script>
+        console.log("Hello,World!");    
+        let button = document.querySelector("#button ");
+        // console.log(button);
+        button.addEventListener('click', changeB); // line says life user click button run the change changeb
+
+        function changeB(){
+            // console.log("This worked");
+            button.textContent = "Test";
+            button.style.backgroundColor = "seagreen";
+            button.style.border = "cornsilk";
+            button.style.color = "white";
+        }
+        function achangeB(){
+            // console.log("This worked");
+            abutton.textContent = "Test Two ";
+            abutton.style.backgroundColor = "pink";
+            abutton.style.border = "lightpink";
+            abutton.style.color = "white";
+        }
+
+        function s(){
+            form.backgroundColor = "blue";
+        }
+
+        let guessBtn = document.querySelector(".guestSubmit");
+        let userGuess = document.querySelector(".guessField");
+
+        abutton.addEventListener('click', achangeB); 
+        
+    </script>
+</body>
+</html>
