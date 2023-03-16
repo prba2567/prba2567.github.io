@@ -31,7 +31,7 @@ function result() {
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round(300) + " stone ";
+    const weight = Math.round(300) + " stones ";
     const temperature =  Math.round(94 * (5/9)) + " C";
 
     newStory = newStory.replaceAll("300 pounds" , weight);
