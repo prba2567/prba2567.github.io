@@ -9,7 +9,7 @@ function randomValueFromArray(array){
 
 
 
-let storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. When she got to :inserty:, :insertx: stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 40 pounds, and it was a windy day.";
+let storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. When she got to :inserty:, :insertx: stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 30 pounds, and it was a windy day.";
 const insertX =["Snow White ", "Cinderella", "Jasmine"];
 const insertY =["Wonderland","Disneyland","Marvel"];
 const insertZ = ["burned the place down ", "melted into the storybook", "turned into a dragon and flew away"];
@@ -35,10 +35,10 @@ function result() {
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round(40 * (21/300)) + " stones ";
+    const weight = Math.round(30 * (21/300)) + " stones ";
     const temperature =  Math.round( 62 * (5/9) )+ " C";
 
-    newStory = newStory.replaceAll("40 pounds" , weight);
+    newStory = newStory.replaceAll("30 pounds" , weight);
     newStory = newStory.replaceAll("94 fahrenheit", temperature);
   }
 
