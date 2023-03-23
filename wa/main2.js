@@ -22,9 +22,8 @@ for(var i =0; i < arr.length; i++)
 {
     console.log("I have loaded 3")
     var newImage = document.createElement('img');
-    newImage.setAttribute('src', arr[i]);
+    newImage.setAttribute('src',arr[i]);
     newImage.setAttribute('alt', alt[i]);
-    console.log("I have loaded 4")
     thumbBar.appendChild(newImage);
     newImage.addEventListener('click',  e => {
         console.log("HI");
