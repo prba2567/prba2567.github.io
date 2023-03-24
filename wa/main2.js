@@ -32,3 +32,20 @@ for(var i =0; i < arr.length; i++)
     }); 
     
 }
+
+// 
+
+btn.onclick = changeOverlay;
+function changeOverlay () {
+var cl = btn.getAttribute('class');
+if (cl === 'dark') {
+btn.setAttribute('class', 'light');
+btn.textContent = 'Lighten';
+overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
+}
+else {
+btn.setAttribute('class', 'dark');
+btn.textContent = 'Darken';
+overlay.style.backgroundColor = 'rgba(0,0,0,0)';
+}
+};

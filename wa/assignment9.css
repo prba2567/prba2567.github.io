@@ -4,6 +4,9 @@ h1 {
     color:palevioletred;
     background-color:lavender;
     border-radius: 10px;
+    border-style: groove;
+    font-weight:lighter;
+    
   }
   
   body {
@@ -59,8 +62,10 @@ h1 {
 
   div{
     max-height: 300px;
+    border-radius: 7px;
   }
   img{
     max-width: 750px;
     max-height: 400px;
+    border-radius: 7px;
   }
