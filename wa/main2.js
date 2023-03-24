@@ -7,7 +7,7 @@ const thumbBar = document.querySelector('.thumb-bar');
 const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
-const arr = ['chandler-walters-qFuKzUleXsw-unsplash.jpg', 'soheb-zaidi-qGereuMoZNw-unsplash.jpg', 'wolfgang-hasselmann-AKeb3CguZpw-unsplash.jpg','wolfgang-hasselmann-Ss_NBsZWIt8-unsplash.jpg','xx-liu-3qsrd-4-_pU-unsplash.jpg'];
+const arr = ['pic.png','wolfgang-hasselmann-Ss_NBsZWIt8-unsplash.jpg','xx-liu-3qsrd-4-_pU-unsplash.jpg','pawel-czerwinski-wT4AZyw4pPY-unsplash.jpg' ,'wolfgang-hasselmann-AKeb3CguZpw-unsplash.jpg'];
 const alt = ['Pic 1', 'Pic 2', 'Pic 3', 'Pic 4', 'Pic 5'];
 
 console.log("I have loaded 2 ")
