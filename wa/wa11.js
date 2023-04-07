@@ -4,7 +4,7 @@ btn.addEventListener('click', getQuote);
 const atn = document.querySelector("#js-ans");
 atn.addEventListener('click', getAns);
 
-const endpoint = "https://geek-jokes.sameerkumar.website/api?format=json";
+const endpoint = "https://uselessfacts.jsph.pl/api/v2/facts/random";
 const endpoint2 = "https://random.dog/woof.json"
 
 async function getQuote()
@@ -17,7 +17,7 @@ async function getQuote()
             throw Error(response.statusText)
         }
         const json = await response.json();
-        displayQuote(json.joke); 
+        displayQuote(json.text); 
     }
     catch(err)
     {
