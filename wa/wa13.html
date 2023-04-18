@@ -10,6 +10,29 @@
     <script defer src="wa13.js"></script>
 </head>
 <body>
+    <div>
+        <p> Please select the volume</p>
+        <p class = "output"> 50 </p>
+    </div>
+    <div> <!-- plus/ minus volume enter-->
+        <form >
+            <input class = "minus-button" name = "minus-button"  type="button" value = "MINUS"></input>
+            <input class = "plus-button" name = "plus-button"  type="button" value = "PLUS"></input>
+            <input class = "reset-button" name = "reset-button"  type="button" value = "RESET"></input>
+            <input class = "random-button" name = "random-button"  type="button" value = "RANDOM"></input>
+            <input class = "submit-button" name = "submit-button"  type="button" value = "SUBMIT"></input>
+        </form>
+
+    </div>
+
+    <div><!-- Slider -->
+    <div class="slidecontainer"> 
+        <p> Please select volume</p>
+        <input type = "range" min = "0" max ="100" class = "slider" id = "myRange"> </input>
+        <input class = "slider-submit-button" name = "slider-submit-button"  type="button" value = "Submit"></input>
+        <p class = "slider-output"> </p> 
+    </div>
+    </div>
 
 </body>
 </html>
