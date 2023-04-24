@@ -4,7 +4,6 @@ const selectors = {
     moves: document.querySelector('.moves'),
     timer: document.querySelector('.timer'),
     start: document.querySelector('button'),
-    win: document.querySelector('.win')
 }
 
 const state = {
@@ -50,7 +49,7 @@ const generateGame = () => {
         throw new Error("The dimension of the board must be an even number.")
     }
 
-    const emojis = ['0%', '10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%','100']
+    const emojis = ['0%', '10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%','100%']
     const picks = pickRandom(emojis, (dimensions * dimensions) / 2) 
     const items = shuffle([...picks, ...picks])
     const cards = `
@@ -107,7 +106,9 @@ const flipCard = card => {
         if (flippedCards[0].innerText === flippedCards[1].innerText) {
             flippedCards[0].classList.add('matched')
             flippedCards[1].classList.add('matched')
-            
+            setTimeout(function() {
+                alert('Volume Set!')
+              }, 1000);
         }
 
         setTimeout(() => {
