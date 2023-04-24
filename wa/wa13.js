@@ -1,132 +1,149 @@
+const selectors = {
+    boardContainer: document.querySelector('.board-container'),
+    board: document.querySelector('.board'),
+    moves: document.querySelector('.moves'),
+    timer: document.querySelector('.timer'),
+    start: document.querySelector('button'),
+    win: document.querySelector('.win')
+}
 
+const state = {
+    gameStarted: false,
+    flippedCards: 0,
+    totalFlips: 0,
+    totalTime: 0,
+    loop: null
+}
 
-// function check() {
-//     console.log('test');
-// }
+const shuffle = array => {
+    const clonedArray = [...array]
 
-// function submit() {
-//     alert("Your volume "+ output.textContent);
-// }
+    for (let index = clonedArray.length - 1; index > 0; index--) {
+        const randomIndex = Math.floor(Math.random() * (index + 1))
+        const original = clonedArray[index]
 
-// function reset() {
-//     outputInt = 0;
-//     output.textContent = outputInt;
-// }
-
-// function minus() {
-//     if (outputInt > 0) {
-//     outputInt -=1;
-//     output.textContent = outputInt; }
-    
-// }
-
-// function plus() {
-//     if (outputInt < 100) {
-//     outputInt +=1;
-//     output.textContent = outputInt;
-//     }
-// }
-
-// function random() {
-//     outputInt = randomNumber(0, 100);
-//     output.textContent = outputInt;
-// }
-
-// function randomNumber(min, max) {
-//     const num = Math.floor(Math.random() * (max - min + 1)) + min;
-//     return num;
-//   }
-
-
-
-// const output = document.querySelector('.output');
-// let outputInt = parseInt(output.textContent);
-// console.log(outputInt);
-
-// const minusButton = document.querySelector('.minus-button').addEventListener('click', minus);
-// const plusButton = document.querySelector('.plus-button').addEventListener('click', plus);
-// const resetButton = document.querySelector('.reset-button').addEventListener('click', reset);
-// const randomButton = document.querySelector('.random-button').addEventListener('click', random);
-// const submitButton = document.querySelector('.submit-button').addEventListener('click', submit);
-
-
-// /* const button = document.querySelector('.button');
-// const output = document.querySelector('.output');
-// let phone_content = document.querySelector('.phone');
-
-// button.addEventListener('click', updateOutput);
-
-// function updateOutput() {
-//     output.textContent = phone_content.value;
-//     alert(phone_content.value);
-// }
-// */
-
-
-// var slider = document.getElementById("myRange");
-// var sliderSubmit = document.querySelector(".slider-submit-button").addEventListener('click', update);
-// var sliderOutput = document.querySelector(".slider-output");
-
-
-// // Update the current slider value (each time you drag the slider handle)
-// function update() {
-//   sliderOutput.textContent = slider.value;
-// }
-
-const cards = document.querySelectorAll('.memory-card');
-
-let hasFlippedCard = false;
-let lockBoard = false;
-
-let firstCard, secondCard;
-
-function flipCard() {
-if (lockBoard) return;
-if (this === firstCard) return;
-//   this.classList.toggle('flip');
-this.classList.add('flip');
-
-  if (!hasFlippedCard) {
-     hasFlippedCard = true;  
-     firstCard = this;
-     return;
+        clonedArray[index] = clonedArray[randomIndex]
+        clonedArray[randomIndex] = original
     }
-   secondCard = this;
 
-  checkForMatch();
- }
+    return clonedArray
+}
 
-function checkForMatch() {
-    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-    isMatch ? disableCards() : unflipCards();
- }
+const pickRandom = (array, items) => {
+    const clonedArray = [...array]
+    const randomPicks = []
 
- function disableCards() {
-   firstCard.removeEventListener('click', flipCard);
-   secondCard.removeEventListener('click', flipCard);
+    for (let index = 0; index < items; index++) {
+        const randomIndex = Math.floor(Math.random() * clonedArray.length)
+        
+        randomPicks.push(clonedArray[randomIndex])
+        clonedArray.splice(randomIndex, 1)
+    }
 
-   resetBoard();
- }
+    return randomPicks
+}
 
- function unflipCards() {
-    lockBoard = true;
-   setTimeout(() => {
-     firstCard.classList.remove('flip');
-     secondCard.classList.remove('flip');
-   }, 1500);
-   resetBoard();
- }
+const generateGame = () => {
+    const dimensions = selectors.board.getAttribute('data-dimension')
 
- function resetBoard() {
-     [hasFlippedCard, lockBoard] = [false, false];
-   [firstCard, secondCard] = [null, null];
- }
+    if (dimensions % 2 !== 0) {
+        throw new Error("The dimension of the board must be an even number.")
+    }
 
- (function shuffle() {
-       cards.forEach(card => {
-         let ramdomPos = Math.floor(Math.random() * 12);
-         card.style.order = ramdomPos;
-       });
-     })();
+    const emojis = ['0%', '10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%','100']
+    const picks = pickRandom(emojis, (dimensions * dimensions) / 2) 
+    const items = shuffle([...picks, ...picks])
+    const cards = `
+        <div class="board" style="grid-template-columns: repeat(${dimensions}, auto)">
+            ${items.map(item => `
+                <div class="card">
+                    <div class="card-front"></div>
+                    <div class="card-back">${item}</div>
+                </div>
+            `).join('')}
+       </div>
+    `
+    
+    const parser = new DOMParser().parseFromString(cards, 'text/html')
 
-cards.forEach(card => card.addEventListener('click', flipCard));
+    selectors.board.replaceWith(parser.querySelector('.board'))
+}
+
+const startGame = () => {
+    state.gameStarted = true
+    selectors.start.classList.add('disabled')
+
+    state.loop = setInterval(() => {
+        state.totalTime++
+
+        selectors.moves.innerText = `${state.totalFlips} moves`
+        selectors.timer.innerText = `time: ${state.totalTime} sec`
+    }, 1000)
+}
+
+const flipBackCards = () => {
+    document.querySelectorAll('.card:not(.matched)').forEach(card => {
+        card.classList.remove('flipped')
+    })
+
+    state.flippedCards = 0
+}
+
+const flipCard = card => {
+    state.flippedCards++
+    state.totalFlips++
+
+    if (!state.gameStarted) {
+        startGame()
+    }
+
+    if (state.flippedCards <= 2) {
+        card.classList.add('flipped')
+    }
+
+    if (state.flippedCards === 2) {
+        const flippedCards = document.querySelectorAll('.flipped:not(.matched)')
+
+        if (flippedCards[0].innerText === flippedCards[1].innerText) {
+            flippedCards[0].classList.add('matched')
+            flippedCards[1].classList.add('matched')
+            
+        }
+
+        setTimeout(() => {
+            flipBackCards()
+        }, 1000)
+    }
+
+    // If there are no more cards that we can flip, we won the game
+    if (!document.querySelectorAll('.card:not(.flipped)').length) {
+        setTimeout(() => {
+            selectors.boardContainer.classList.add('flipped')
+            selectors.win.innerHTML = `
+                <span class="win-text">
+                    You won!<br />
+                    with <span class="highlight">${state.totalFlips}</span> moves<br />
+                    under <span class="highlight">${state.totalTime}</span> seconds
+                </span>
+            `
+
+            clearInterval(state.loop)
+        }, 1000)
+    }
+}
+
+const attachEventListeners = () => {
+    document.addEventListener('click', event => {
+        const eventTarget = event.target
+        const eventParent = eventTarget.parentElement
+
+        if (eventTarget.className.includes('card') && !eventParent.className.includes('flipped')) {
+            flipCard(eventParent)
+        } else if (eventTarget.nodeName === 'BUTTON' && !eventTarget.className.includes('disabled')) {
+            startGame()
+        }
+    })
+}
+
+generateGame()
+attachEventListeners()
