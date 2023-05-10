@@ -4,7 +4,7 @@
 ## Projects
 * ### [HTML](https://prba2567.github.io/html-midterm/page5.html)
 * ### [CSS](https://prba2567.github.io/css/index.html)
-* ### JS
+* ### [JS](https://prba2567.me/js/index.html)
 
 ## In-Class Assignments
 * ### [ICA3](https://prba2567.github.io/ica/ica3a.html)
