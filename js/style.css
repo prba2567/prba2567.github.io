@@ -9,5 +9,11 @@ html {
     color: cornflowerblue;
     font-size: 3rem;
     text-align: center;
-    background:url('sketch2.js');
+    background-color:aliceblue;
+  }
+
+  a{
+     color:black;
+     font-size: 35px;
+     border: 20px;
   }
