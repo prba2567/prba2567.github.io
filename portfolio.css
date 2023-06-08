@@ -17,16 +17,25 @@ nav{
     position: sticky;
     left: 10px;
     right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     
 }
 a{
     color: rgb(190, 206, 220);
 }
+div{
+    margin-left: 570px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightsteelblue;
+}
 
 #canvas1{
     border: 2px solid white;
     position: absolute;
-    left: 30px;
+    margin-left: 50px;
+    margin-right: 10px;
     transform: translate(-1%, -1%);
     width: 1366px;
     height: 768px;
