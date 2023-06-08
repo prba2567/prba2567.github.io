@@ -71,6 +71,7 @@ embed{
 }
 
 h1{
+    margin-left: 30px;
     color:rgb(148, 179, 207);
 }
 
@@ -81,6 +82,11 @@ video{
     margin-left: 520px;
 }
 
+.about{
+    font-size: 50px;
+    margin-left: 30px;
+    margin-right: 700px;
+}
 
 
 
