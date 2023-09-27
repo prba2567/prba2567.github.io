@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Jitsi Website</title>
+    <link rel="stylesheet" href="jitsi.css">
+    <script src="https://meet.jit.si/external_api.js"></script>
+        <script>
+            var domain = "meet.jit.si";
+            var options = {
+                roomName: "JitsiMeetAPIExample",
+                width: 700,
+                height: 180,
+                parent: undefined,
+                configOverwrite: {},
+                interfaceConfigOverwrite: {
+                    filmStripOnly: true
+                }
+            }
+            var api = new JitsiMeetExternalAPI(domain, options);
+        </script>
+    </body>
+   
+
+</head>
+<body>
+    <h1> Here is my trial Jitsi Page</h1>
+</body>
+</html>
