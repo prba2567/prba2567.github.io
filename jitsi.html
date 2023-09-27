@@ -1,12 +1,41 @@
+
 <!DOCTYPE html>
+<html>
+    <title>Test Jitsi Website</title>
+    <link rel="stylesheet" href="jitsi.css">
+  <head>
+    <script src='https://8x8.vc/vpaas-magic-cookie-212c07865c314bc79b9e8de61e2e0650/external_api.js' async></script>
+    <style>html, body, #jaas-container { height: 100%; }</style>
+    <script type="text/javascript">
+      window.onload = () => {
+        const api = new JitsiMeetExternalAPI("8x8.vc", {
+          roomName: "vpaas-magic-cookie-212c07865c314bc79b9e8de61e2e0650/SampleAppInvisibleDecreasesSuppressRarely",
+          parentNode: document.querySelector('#jaas-container'),
+                        // Make sure to include a JWT if you intend to record,
+                        // make outbound calls or use any other premium features!
+                        // jwt: "eyJraWQiOiJ2cGFhcy1tYWdpYy1jb29raWUtMjEyYzA3ODY1YzMxNGJjNzliOWU4ZGU2MWUyZTA2NTAvODczMmI3LVNBTVBMRV9BUFAiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJqaXRzaSIsImlzcyI6ImNoYXQiLCJpYXQiOjE2OTU3ODg3MzAsImV4cCI6MTY5NTc5NTkzMCwibmJmIjoxNjk1Nzg4NzI1LCJzdWIiOiJ2cGFhcy1tYWdpYy1jb29raWUtMjEyYzA3ODY1YzMxNGJjNzliOWU4ZGU2MWUyZTA2NTAiLCJjb250ZXh0Ijp7ImZlYXR1cmVzIjp7ImxpdmVzdHJlYW1pbmciOmZhbHNlLCJvdXRib3VuZC1jYWxsIjpmYWxzZSwic2lwLW91dGJvdW5kLWNhbGwiOmZhbHNlLCJ0cmFuc2NyaXB0aW9uIjpmYWxzZSwicmVjb3JkaW5nIjpmYWxzZX0sInVzZXIiOnsiaGlkZGVuLWZyb20tcmVjb3JkZXIiOmZhbHNlLCJtb2RlcmF0b3IiOnRydWUsIm5hbWUiOiJUZXN0IFVzZXIiLCJpZCI6Imdvb2dsZS1vYXV0aDJ8MTAyNjY2ODIzMDEzMzk2NTkxNDEzIiwiYXZhdGFyIjoiIiwiZW1haWwiOiJ0ZXN0LnVzZXJAY29tcGFueS5jb20ifX0sInJvb20iOiIqIn0.AAcGa4y75ATNbEi-TDKaeUCZSz8Ka9yLpYwGhDHI7xwna44VnrxD5y_TLXeASV8YbrB3BXTwjZPUNbXLZsQLzh49_2Trn1Wkabw-kb5GsJTrWLCpDCr8VRvQZWf_DtzJZGZnVO760k8WoNOZTUCOAWB6nFTLSLBqB0iG_cTBVn3HGA33yiEy3jAr-I2x1uoLNgKOVsGzfss7uo4f1gUgDOmF9K8PvgND9YUJgRAOmRqVpSINxXvzchR8DcoppiMai3kYKFpRk3-KhevX-O3CkZ5fdgZutiUmrZ9qvpvIDeZsuoBr2b240IFB9k52Ml1wiTlhGyFPY5gKTadwBMbyBQ"
+        });
+      }
+    </script>
+  </head>
+  <body
+  ><div id="jaas-container">
+    <h1> Here is my trial Jitsi Page</h1>
+  </body>
+</html>
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Jitsi Website</title>
-    <link rel="stylesheet" href="jitsi.css">
-    <script src="https://meet.jit.si/external_api.js"></script>
+    <title>Document</title>
+    <head>
+      
+    <body>
+        <script src="https://meet.jit.si/external_api.js"></script>
         <script>
             var domain = "meet.jit.si";
             var options = {
@@ -22,10 +51,8 @@
             var api = new JitsiMeetExternalAPI(domain, options);
         </script>
     </body>
-   
-
 </head>
 <body>
-    <h1> Here is my trial Jitsi Page</h1>
-</body>
+    
+</body> -->
 </html>
